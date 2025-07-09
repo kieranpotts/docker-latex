@@ -1,0 +1,7 @@
+= LaTeX Docker image
+
+Docker container image for running LaTeX compilations.
+
+''''
+
+Copyright © 2025-present Kieran Potts, link:./LICENSE.txt[MIT license]
