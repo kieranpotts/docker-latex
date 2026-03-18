@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+set -e
+
+mkdir -p logs
+rm -rf logs/*
+
+for dockerfile in src/*/Dockerfile; do
+
+  variant=$(basename "$(dirname "${dockerfile}")")
+  image="kieranpotts/latex:${variant}"
+
+  echo "Building ${image} ..."
+
+  docker build -t "${image}" -f "${dockerfile}" .
+
+  echo "${image}" >> logs/images.txt
+done
+
+echo "Done. Built images:"
+cat logs/images.txt
