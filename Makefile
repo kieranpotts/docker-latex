@@ -1,10 +1,9 @@
-.PHONY: build publish clean help
+.PHONY: build publish help
 
 help:
 	@echo "Available targets:"
 	@echo "  build   - Compile the image"
-	@echo "  publish - Publish an image to Docker Hub"
-	@echo "  clean   - Delete logs and other temporary artifacts"
+	@echo "  publish - Publish the image to Docker Hub"
 	@echo "  help    - Show this help message"
 
 build:
@@ -12,6 +11,3 @@ build:
 
 publish:
 	./run/publish
-
-clean:
-	rm -rf logs/

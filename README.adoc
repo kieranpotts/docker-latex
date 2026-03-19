@@ -1,8 +1,10 @@
 = LaTeX Docker images
 
-Docker container images for running LaTeX (TexLive) compilations. Published to https://hub.docker.com/r/kieranpotts/latex[Docker Hub] with multiple variants to suit different use cases.
+Docker container images for running LaTeX (TexLive) compilations.
 
-See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for usage instructions. The following documentation is for the maintainers of this repository.
+The image is based on Ubuntu 24.04 LTS with the full TexLive package installed. This is the most commonly used TexLive package and is suitable for most use cases. However, it's a large package. The image size is 2.64GB, and disk usage of a running container is 8.75GB.
+
+See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for usage instructions. The following documentation is for the maintainers of this project.
 
 == Documentation
 
@@ -21,14 +23,21 @@ Make the `run/*` scripts executable:
 chmod +x run/*
 ----
 
-=== Building locally
+=== Building images locally
 
 [source,sh]
 ----
 make build
 ----
 
-This iterates over all variant directories under `src/`, builds each as a Docker image, and stores the list of built images in `logs/images.txt`.
+This builds an image from `./src/Dockerfile`. The image will be added to your local running instance of Docker.
+
+Verify the built images with this command:
+
+[source,sh]
+----
+docker images kieranpotts/latex:latest
+----
 
 To build only one variant:
 
