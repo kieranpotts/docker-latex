@@ -1,10 +1,10 @@
-= LaTeX Docker images
+= LaTeX Docker image
 
-Docker container images for running LaTeX (TexLive) compilations.
+Docker container images for running LaTeX (TexLive) compilations. The image is based on Debian slim with a minimal set of LaTeX packages. The image size is reasonably chunky – 2.17GB – but it covers most use cases for compiling PDFs from LaTeX documents using `pdflatex`.
 
-The image is based on Ubuntu 24.04 LTS with the full TexLive package installed. This is the most commonly used TexLive package and is suitable for most use cases. However, it's a large package. The image size is 2.64GB, and disk usage of a running container is 8.75GB.
+See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for usage instructions. Also see my https://github.com/kieranpotts/resume[résumé] for example usage.
 
-See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for usage instructions. The following documentation is for the maintainers of this project.
+The following documentation is for the maintainers of this project.
 
 == Documentation
 
@@ -30,9 +30,9 @@ chmod +x run/*
 make build
 ----
 
-This builds an image from `./src/Dockerfile`. The image will be added to your local running instance of Docker.
+This builds an image from `./src/Dockerfile`. The image will be added to your locally running instance of Docker.
 
-Verify the built images with this command:
+Verify the built image with this command:
 
 [source,sh]
 ----
