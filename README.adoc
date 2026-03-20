@@ -4,8 +4,6 @@ This repository builds a Docker container image for running LaTeX compilations.
 
 The image is based on Debian slim with a minimal set of TeX Live packages installed. The image size is reasonably chunky, but it covers most use cases for compiling PDFs from LaTeX documents using `pdflatex`.
 
-
-
 == Documentation
 
 The following documentation is for the maintainers of this project. See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for instructions to use the Docker image. My https://github.com/kieranpotts/resume[résumé] also demonstrates how to use the image.
