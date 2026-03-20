@@ -1,8 +1,8 @@
 = LaTeX Docker image
 
-Docker container images for running LaTeX compilations.
+This repository builds a Docker container image for running LaTeX compilations.
 
-The image is based on Debian slim with a minimal set of TeX Live packages. The image size is reasonably chunky, but it covers most use cases for compiling PDFs from LaTeX documents using `pdflatex`.
+The image is based on Debian slim with a minimal set of TeX Live packages installed. The image size is reasonably chunky, but it covers most use cases for compiling PDFs from LaTeX documents using `pdflatex`.
 
 See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for usage instructions. Also see my https://github.com/kieranpotts/resume[résumé] for example usage.
 
@@ -25,14 +25,16 @@ Make the `run/*` scripts executable:
 chmod +x run/*
 ----
 
-=== Building images
+=== Building
+
+The following command builds an image from `./src/Dockerfile`:
 
 [source,sh]
 ----
 make build
 ----
 
-This builds an image from `./src/Dockerfile`. The image will be added to your locally running instance of Docker.
+The image will be added to your locally running instance of Docker.
 
 Verify the built image with this command:
 
@@ -41,7 +43,7 @@ Verify the built image with this command:
 docker images kieranpotts/latex:latest
 ----
 
-=== Publishing images
+=== Publishing
 
 Images are hosted on https://hub.docker.com/r/kieranpotts/latex[Docker Hub].
 
@@ -75,10 +77,10 @@ Tag the HEAD Git commit with a semantic version:
 $ git tag -a v[major].[minor].[patch]
 ----
 
-It is RECOMMENDED to include details of the changes in the release in a message attached to the Git tag object. If the changes can be summarized in a single line, you can use the `-m` option to specify the message inline:
+It is RECOMMENDED to include a short messages that summarizes the changes in the release:
 
 ----
-$ git tag -a v2.0.3 -m "Minor edits for improved readability."
+$ git tag -a v2.0.3 -m "Upgrade base image to latest LTS"
 ----
 
 Push the new tag:
@@ -87,7 +89,7 @@ Push the new tag:
 $ git push origin v2.0.3
 ----
 
-Remember to push any new tags with new commits:
+Or push any new tags with new commits:
 
 ----
 $ git push --follow-tags
@@ -114,7 +116,7 @@ The `publish` script will:
 * Push the image, with both the versioned and `latest` tags, to Docker Hub.
 * Log out of Docker Hub.
 
-The image will then be available to pull globally. You can choose to sync your local pulled image with the `latest` available from Docker Hub, or pin your image to a specific release:
+The image will then be available to pull globally. You can choose to sync your local image with the latest one available from Docker Hub, or pin your image to a specific release:
 
 [source,sh]
 ----
