@@ -4,11 +4,11 @@ This repository builds a Docker container image for running LaTeX compilations.
 
 The image is based on Debian slim with a minimal set of TeX Live packages installed. The image size is reasonably chunky, but it covers most use cases for compiling PDFs from LaTeX documents using `pdflatex`.
 
-See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for usage instructions. Also see my https://github.com/kieranpotts/resume[résumé] for example usage.
 
-The following documentation is for the maintainers of this project.
 
 == Documentation
+
+The following documentation is for the maintainers of this project. See the https://hub.docker.com/r/kieranpotts/latex[Docker Hub repository] for instructions to use the Docker image. My https://github.com/kieranpotts/resume[résumé] also demonstrates how to use the image.
 
 === Requirements
 
@@ -80,13 +80,13 @@ $ git tag -a v[major].[minor].[patch]
 It is RECOMMENDED to include a short messages that summarizes the changes in the release:
 
 ----
-$ git tag -a v2.0.3 -m "Upgrade base image to latest LTS"
+$ git tag -a v2.1.0 -m "Upgrade base image to latest LTS"
 ----
 
 Push the new tag:
 
 ----
-$ git push origin v2.0.3
+$ git push origin v2.1.0
 ----
 
 Or push any new tags with new commits:
