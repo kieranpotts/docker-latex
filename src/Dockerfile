@@ -2,7 +2,7 @@
 # excellent support for `texlive` packages.
 FROM debian:bookworm-slim
 
-LABEL maintainer="Kieran Potts <work@kieranpotts.com>"
+LABEL maintainer="Kieran Potts <code@kieranpotts.com>"
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
