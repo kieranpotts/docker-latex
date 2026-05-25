@@ -113,6 +113,6 @@ docker pull kieranpotts/latex:latest
 docker pull kieranpotts/latex:1.0.0
 ```
 
----
+-----
 
 Copyright © 2025-present Kieran Potts, [MIT license](./LICENSE.txt)
