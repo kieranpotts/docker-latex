@@ -16,6 +16,8 @@ RUN apt-get update -q
 # - texlive-latex-extra: Additional packages - titlesec, enumitem, geometry,
 #   hyperref, xcolor, colortbl, etc.
 # - texlive-fonts-recommended: Font packages for proper typography.
+# - texlive-fonts-extra: Multi-weight font families (eg. Source Sans Pro) not
+#   included in texlive-fonts-recommended. Large package (~1-2GB installed).
 #
 # https://www.tug.org/texlive/
 #
@@ -23,7 +25,8 @@ RUN apt-get install -qy \
     texlive-base \
     texlive-latex-base \
     texlive-latex-extra \
-    texlive-fonts-recommended
+    texlive-fonts-recommended \
+    texlive-fonts-extra
 
 # Clean up `apt` cache to save space.
 RUN rm -rf /var/lib/apt/lists/*
