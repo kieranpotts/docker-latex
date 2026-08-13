@@ -31,10 +31,10 @@ SHOULD NOT, OPTIONAL, and MAY are to be interpreted as described in
 
 ## Tools
 
-- **`make build`** \
+- `make build` \
   Builds the image locally.
 
-- **`make publish`** \
+- `make publish` \
   Publishes the built image to Docker Hub. Requires `DOCKER_USERNAME` and
   `DOCKER_TOKEN` to be set, and the HEAD commit to be tagged with the release
   version being published.
@@ -44,13 +44,13 @@ SHOULD NOT, OPTIONAL, and MAY are to be interpreted as described in
 - MUST tag the HEAD commit with the semantic version before running
   `make publish`, so the published image tag matches the Git tag.
 
-- MUST NOT commit a Docker Hub access token. Treat it like a password;
-  regenerate immediately via Docker Hub account settings if one leaks.
+- MUST NOT commit a Docker Hub access token. Treat it like a password.
+  Regenerate immediately via Docker Hub account settings if one leaks.
 
 ## References
 
 This project follows Kieran Potts' technical standards. Read the relevant
-standard(s) below for the current task; their RFC 2119 rules MUST be followed
+standard(s) below for the current task. Their RFC 2119 rules MUST be followed
 unless explicitly overridden elsewhere in this file.
 
 - **[TS-9: Version Control](https://kieranpotts.com/standards/009)**
