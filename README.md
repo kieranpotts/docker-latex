@@ -6,6 +6,9 @@ The image is based on Debian slim with a minimal set of TeX Live packages
 installed. The image size is reasonably chunky, but it covers most use cases
 for compiling PDFs from LaTeX documents using `pdflatex`.
 
+> [!IMPORTANT]
+> This project is no longer maintained.
+
 ## 💻 Usage
 
 See the [Docker Hub repository](https://hub.docker.com/r/kieranpotts/latex) for
